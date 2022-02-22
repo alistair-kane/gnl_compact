@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alkane <alkane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alistair <alistair@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 17:08:24 by alkane            #+#    #+#             */
-/*   Updated: 2021/12/25 01:43:15 by alkane           ###   ########.fr       */
+/*   Updated: 2022/02/22 07:15:52 by alistair         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,10 @@ char	*get_next_line(int fd)
 	{
 		if (*buf)
 			bufjoiner(&line, buf);
-
 		read_bytes = read(fd, buf, BUFFER_SIZE);
-
 		if (read_bytes <= 0 && !(*line))
 			return (return_free(line));
-		
 		buf[read_bytes] = '\0';
-		
 		if ((ft_strchr(buf) == -1) && read_bytes < BUFFER_SIZE)
 		{
 			bufjoiner(&line, buf);

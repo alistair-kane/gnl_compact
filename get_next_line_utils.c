@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alkane <alkane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alistair <alistair@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 20:07:25 by alkane            #+#    #+#             */
-/*   Updated: 2021/12/24 13:56:20 by alkane           ###   ########.fr       */
+/*   Updated: 2022/02/22 07:39:07 by alistair         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	int		total;
 
 	total = nmemb * size;
-	p = malloc(nmemb * size);
+	p = malloc(total);
 	if (!p)
 		return (0);
 	s = p;
@@ -30,7 +30,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 void	ft_memset(char *s,	size_t n)
 {
-	while (n-- > 0)
+	while (n--)
 		*s++ = '\0';
 }
 
