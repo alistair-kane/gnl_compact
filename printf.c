@@ -38,7 +38,6 @@ int	ft_printdi(int n)
 	char	digit;
 
 	rez = 0;
-	digit = 0;
 	if (n == -2147483648)
 		return (write(1, "-2147483648", 11));
 	else
@@ -83,8 +82,8 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
-			rez += conversion(s, i + 1, args);
 			i++;
+			rez += conversion(s, i, args);
 		}
 		else
 			rez += write(1, &s[i], 1);
