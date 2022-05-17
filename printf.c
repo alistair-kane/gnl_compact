@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+
 int	ft_printx(unsigned int n)
 {
 	int	rez;
@@ -95,6 +96,6 @@ int	ft_printf(const char *s, ...)
 
 int main()
 {
-    ft_printf("%s, %d, %x\n", "Hello", 42, 42);
-    printf("%s, %d, %x\n", "Hello", 42, 42);
+    ft_printf("%s, %d, %x\n", "Hello", 42, 400);
+    printf("%s, %d, %x\n", "Hello", 42, 400);
 }
